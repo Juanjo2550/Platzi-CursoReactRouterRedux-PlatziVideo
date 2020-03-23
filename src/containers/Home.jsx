@@ -10,10 +10,10 @@ const Home = ({ myList, trends, originals }) => {
   return (
     <>
       <Search />
-      {myList.length > 0 && (
+      {myList.length > 0 && ( //Se valida si myList esta vacio o no.
         <Categories title='Mi Lista'>
           <Carousel>
-            {myList.map(item => <CarouselItem key={item.id} {...item} />)}
+            {myList.map(item => <CarouselItem key={item.id} {...item} favorite />)}
           </Carousel>
         </Categories>
       )}
