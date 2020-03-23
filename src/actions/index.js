@@ -23,10 +23,28 @@ const registerRequest = payload => ({
   payload,
 });
 
+const getVideoSource = payload => ({
+  type: 'GET_VIDEO_SOURCE',
+  payload,
+});
+
+const filter = payload => ({
+  type: 'FILTER',
+  payload,
+});
+
+const cleanFilter = payload => ({
+  type: 'CLEAN_FILTER',
+  payload,
+});
+
 module.exports = {
   setFavorite,
   deleteFavorite,
   loginRequest,
   logoutRequest,
   registerRequest,
+  getVideoSource,
+  filter,
+  cleanFilter,
 };
